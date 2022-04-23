@@ -1,10 +1,11 @@
-package com.builder;
+package com.builder.director;
 
-import com.builder.product.CarType;
-import com.builder.parts.Engine;
-import com.builder.parts.TripComputer;
-import com.builder.parts.Transmission;
-import com.builder.parts.GPSNavigator;
+import com.builder.builders.Builder;
+import com.builder.cars.CarType;
+import com.builder.components.Engine;
+import com.builder.components.TripComputer;
+import com.builder.components.Transmission;
+import com.builder.components.GPSNavigator;
 
 /**
  * Diretor define a ordem das etapas de construção. Funciona com um objeto

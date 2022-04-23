@@ -1,15 +1,16 @@
-package com.builder.product;
+package com.builder.cars;
 
-import com.builder.parts.Engine;
-import com.builder.parts.TripComputer;
-import com.builder.parts.Transmission;
-import com.builder.parts.GPSNavigator;
+import com.builder.components.Engine;
+import com.builder.components.TripComputer;
+import com.builder.components.Transmission;
+import com.builder.components.GPSNavigator;
 
 /**
- * Carro Manual é outro produto. Note que ele não tem o mesmo ancestral como um
- * carro. Eles não estão relacionados.
+ * Car é a classe produto. Um carro pode ter um GPS, computador de bordo, e
+ * alguns assentos. Diferentes modelos de carros (esportivo, SUV, conversível)
+ * podem ter diferentes funcionalidades instaladas ou equipadas.
  */
-public class CarManual {
+public class Car {
 
     private final CarType carType;
     private final int seats;
@@ -17,15 +18,51 @@ public class CarManual {
     private final Transmission transmission;
     private final TripComputer tripComputer;
     private final GPSNavigator gpsNavigator;
+    private double fuel = 0;
 
-    public CarManual(CarType carType, int seats, Engine engine, Transmission transmission,
+    public Car(CarType carType, int seats, Engine engine, Transmission transmission,
             TripComputer tripComputer, GPSNavigator gpsNavigator) {
         this.carType = carType;
         this.seats = seats;
         this.engine = engine;
         this.transmission = transmission;
         this.tripComputer = tripComputer;
+        if (this.tripComputer != null) {
+            this.tripComputer.setCar(this);
+        }
         this.gpsNavigator = gpsNavigator;
+    }
+
+    public CarType getCarType() {
+        return carType;
+    }
+
+    public double getFuel() {
+        return fuel;
+    }
+
+    public void setFuel(double fuel) {
+        this.fuel = fuel;
+    }
+
+    public int getSeats() {
+        return seats;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public Transmission getTransmission() {
+        return transmission;
+    }
+
+    public TripComputer getTripComputer() {
+        return tripComputer;
+    }
+
+    public GPSNavigator getGpsNavigator() {
+        return gpsNavigator;
     }
 
     public String print() {

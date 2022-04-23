@@ -1,4 +1,4 @@
-package com.builder.parts;
+package com.builder.components;
 
 /**
  * Apenas mais uma característica de um carro.

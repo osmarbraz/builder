@@ -1,10 +1,10 @@
-package com.builder;
+package com.builder.builders;
 
-import com.builder.product.CarType;
-import com.builder.parts.Engine;
-import com.builder.parts.TripComputer;
-import com.builder.parts.Transmission;
-import com.builder.parts.GPSNavigator;
+import com.builder.cars.CarType;
+import com.builder.components.Engine;
+import com.builder.components.TripComputer;
+import com.builder.components.Transmission;
+import com.builder.components.GPSNavigator;
 
 /**
  * A interface do Builder define todas as formas possíveis de configurar um

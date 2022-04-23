@@ -1,21 +1,16 @@
-package com.builder;
+package com.builder.builders;
 
-import com.builder.product.CarManual;
-import com.builder.product.CarType;
-import com.builder.parts.Engine;
-import com.builder.parts.TripComputer;
-import com.builder.parts.Transmission;
-import com.builder.parts.GPSNavigator;
+import com.builder.cars.Car;
+import com.builder.cars.CarType;
+import com.builder.components.Engine;
+import com.builder.components.TripComputer;
+import com.builder.components.Transmission;
+import com.builder.components.GPSNavigator;
 
 /**
- * Ao contrário de outros padrões de criação, o Builder pode construir produtos
- * não relacionados, que não possuem a interface comum.
- *
- * Neste caso, construímos um manual do usuário para um carro, usando os mesmos
- * passos que construiu um carro. Isso permite produzir manuais para modelos de
- * carros específicos, configurado com diferentes recursos.
+ * Construtores de concreto implementam etapas definidas na interface comum.
  */
-public class CarManualBuilder implements Builder {
+public class CarBuilder implements Builder {
 
     private CarType type;
     private int seats;
@@ -24,7 +19,6 @@ public class CarManualBuilder implements Builder {
     private TripComputer tripComputer;
     private GPSNavigator gpsNavigator;
 
-    @Override
     public void setCarType(CarType type) {
         this.type = type;
     }
@@ -54,7 +48,7 @@ public class CarManualBuilder implements Builder {
         this.gpsNavigator = gpsNavigator;
     }
 
-    public CarManual getResult() {
-        return new CarManual(type, seats, engine, transmission, tripComputer, gpsNavigator);
+    public Car getResult() {
+        return new Car(type, seats, engine, transmission, tripComputer, gpsNavigator);
     }
 }

@@ -1,9 +1,9 @@
 
-import com.builder.product.Car;
-import com.builder.CarBuilder;
-import com.builder.CarManualBuilder;
-import com.builder.Director;
-import com.builder.product.CarManual;
+import com.builder.cars.Car;
+import com.builder.builders.CarBuilder;
+import com.builder.builders.CarManualBuilder;
+import com.builder.director.Director;
+import com.builder.cars.CarManual;
 
 public class Principal {
 

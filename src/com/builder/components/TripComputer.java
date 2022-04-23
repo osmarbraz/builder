@@ -1,6 +1,6 @@
-package com.builder.parts;
+package com.builder.components;
 
-import com.builder.product.Car;
+import com.builder.cars.Car;
 
 /**
  * Apenas mais uma característica de um carro.
