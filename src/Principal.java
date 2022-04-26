@@ -20,7 +20,6 @@ public class Principal {
         // produtos.
         Car car = builder.getResult();
         System.out.println("Carro construido:\n" + car.print());
-
         
         // O diretor pode conhecer várias receitas de construção.
         CarManualBuilder manualBuilder = new CarManualBuilder();
